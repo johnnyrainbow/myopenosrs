@@ -287,7 +287,7 @@ public abstract class AbstractWorldMapIcon {
 			var8 = var6 & 3;
 			var9 = Client.field689[var7];
 			if (var3 >= 0 && var4 >= 0 && var3 < 104 && var4 < 104) {
-				class65.updatePendingSpawn(UrlRequest.Client_plane, var3, var4, var9, var5, var7, var8, 0, -1);
+				MovementEvent.updatePendingSpawn(UrlRequest.Client_plane, var3, var4, var9, var5, var7, var8, 0, -1);
 			}
 
 		} else if (class179.field2290 == var0) {
@@ -385,7 +385,7 @@ public abstract class AbstractWorldMapIcon {
 					var7 = (var6 >> 4 & 7) + class3.field7;
 					var8 = (var6 & 7) + PlayerAppearance.field2520;
 					if (var7 >= 0 && var8 >= 0 && var7 < 104 && var8 < 104) {
-						class65.updatePendingSpawn(UrlRequest.Client_plane, var7, var8, var5, -1, var3, var4, 0, -1);
+						MovementEvent.updatePendingSpawn(UrlRequest.Client_plane, var7, var8, var5, -1, var3, var4, 0, -1);
 					}
 
 				} else if (class179.field2294 == var0) {
@@ -539,7 +539,7 @@ public abstract class AbstractWorldMapIcon {
 							int var28 = (var6 << 7) + (var20 << 6);
 							Model var29 = var18.getModel(var8, var9, var25, var27, var26, var28);
 							if (var29 != null) {
-								class65.updatePendingSpawn(UrlRequest.Client_plane, var5, var6, var10, -1, 0, 0, var3 + 1, var14 + 1);
+								MovementEvent.updatePendingSpawn(UrlRequest.Client_plane, var5, var6, var10, -1, 0, 0, var3 + 1, var14 + 1);
 								var17.animationCycleStart = var3 + Client.cycle;
 								var17.animationCycleEnd = var14 + Client.cycle;
 								var17.model0 = var29;

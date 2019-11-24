@@ -559,7 +559,7 @@ public class ServerPacket {
 			Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.scrollY;
 			return 1;
 		} else if (var0 == ScriptOpcodes.CC_GETTEXT) {
-			Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.text;
+			Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.text;
 			return 1;
 		} else if (var0 == ScriptOpcodes.CC_GETSCROLLWIDTH) {
 			Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.scrollWidth;
@@ -615,9 +615,9 @@ public class ServerPacket {
 		} else if (var0 != ScriptOpcodes.CC_GETOP) {
 			if (var0 == ScriptOpcodes.CC_GETOPBASE) {
 				if (var3.dataText == null) {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 				} else {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.dataText;
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.dataText;
 				}
 
 				return 1;
@@ -628,9 +628,9 @@ public class ServerPacket {
 			int var4 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 			--var4;
 			if (var3.actions != null && var4 < var3.actions.length && var3.actions[var4] != null) {
-				Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.actions[var4];
+				Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.actions[var4];
 			} else {
-				Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+				Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 			}
 
 			return 1;

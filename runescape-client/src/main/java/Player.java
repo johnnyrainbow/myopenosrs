@@ -458,8 +458,8 @@ public final class Player extends Actor {
 						Client.field902.approxDestinationY = var2;
 						Client.field902.approxDestinationSizeX = 1;
 						Client.field902.approxDestinationSizeY = 1;
-						class65 var10 = Client.field902;
-						class65 var11 = var10;
+						MovementEvent var10 = Client.field902;
+						MovementEvent var11 = var10;
 						CollisionMap var12 = Client.collisionMaps[this.plane];
 						int[] var13 = Client.field903;
 						int[] var14 = Client.field730;

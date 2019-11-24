@@ -138,10 +138,10 @@ public class UrlRequester implements Runnable {
 		if (var0 == ScriptOpcodes.CC_SETOP) {
 			var11 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize] - 1;
 			if (var11 >= 0 && var11 <= 9) {
-				var4.setAction(var11, Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize]);
+				var4.setAction(var11, Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize]);
 				return 1;
 			} else {
-				--class65.Interpreter_stringStackSize;
+				--MovementEvent.Interpreter_stringStackSize;
 				return 1;
 			}
 		} else {
@@ -162,10 +162,10 @@ public class UrlRequester implements Runnable {
 				var4.dragThreshold = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 				return 1;
 			} else if (var0 == ScriptOpcodes.CC_SETOPBASE) {
-				var4.dataText = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+				var4.dataText = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 				return 1;
 			} else if (var0 == ScriptOpcodes.CC_SETTARGETVERB) {
-				var4.spellActionName = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+				var4.spellActionName = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 				return 1;
 			} else if (var0 == ScriptOpcodes.CC_CLEAROPS) {
 				var4.actions = null;

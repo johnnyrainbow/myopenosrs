@@ -137,7 +137,7 @@ public final class Client extends GameShell implements Usernamed {
 	@ObfuscatedSignature(
 		signature = "Lba;"
 	)
-	static final class65 field902;
+	static final MovementEvent field902;
 	@ObfuscatedName("oi")
 	@Export("rootWidgetYs")
 	static int[] rootWidgetYs;
@@ -1536,7 +1536,7 @@ public final class Client extends GameShell implements Usernamed {
 		archiveLoaders = new ArrayList(10);
 		archiveLoadersDone = 0;
 		field629 = 0;
-		field902 = new class65();
+		field902 = new MovementEvent();
 		field903 = new int[50];
 		field730 = new int[50];
 	}
@@ -5233,7 +5233,7 @@ public final class Client extends GameShell implements Usernamed {
 				}
 
 				if (ServerPacket.field2165 == var1.serverPacket) {
-					class65.updatePlayers(var3, var1.serverPacketLength);
+					MovementEvent.updatePlayers(var3, var1.serverPacketLength);
 					GraphicsObject.method2030();
 					var1.serverPacket = null;
 					return true;

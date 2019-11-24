@@ -118,14 +118,14 @@ public class DevicePcmPlayerProvider implements class97 {
 
 			for (var6 = 0; var6 < var5.outputCount; ++var6) {
 				if (var4 == var5.keys[var6]) {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var5.strVals[var6];
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var5.strVals[var6];
 					var5 = null;
 					break;
 				}
 			}
 
 			if (var5 != null) {
-				Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var5.defaultStr;
+				Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var5.defaultStr;
 			}
 
 			return 1;
@@ -149,7 +149,7 @@ public class DevicePcmPlayerProvider implements class97 {
 				for (int var8 = 0; var8 < var7.outputCount; ++var8) {
 					if (var6 == var7.keys[var8]) {
 						if (var4 == 115) {
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var7.strVals[var8];
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var7.strVals[var8];
 						} else {
 							Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var7.intVals[var8];
 						}
@@ -161,7 +161,7 @@ public class DevicePcmPlayerProvider implements class97 {
 
 				if (var7 != null) {
 					if (var4 == 115) {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var7.defaultStr;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var7.defaultStr;
 					} else {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var7.defaultInt;
 					}
@@ -170,7 +170,7 @@ public class DevicePcmPlayerProvider implements class97 {
 				return 1;
 			} else {
 				if (var4 == 115) {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "null";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "null";
 				} else {
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 				}

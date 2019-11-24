@@ -4,7 +4,7 @@ import net.runelite.mapping.ObfuscatedName;
 import net.runelite.mapping.ObfuscatedSignature;
 
 @ObfuscatedName("ba")
-public class class65 extends RouteStrategy {
+public class MovementEvent extends RouteStrategy {
 	@ObfuscatedName("d")
 	@ObfuscatedGetter(
 		intValue = -248026877
@@ -18,7 +18,7 @@ public class class65 extends RouteStrategy {
 	@Export("WorldMapElement_fonts")
 	static Fonts WorldMapElement_fonts;
 
-	class65() {
+	MovementEvent() {
 	}
 
 	@ObfuscatedName("f")
@@ -27,8 +27,8 @@ public class class65 extends RouteStrategy {
 		garbageValue = "1339159810"
 	)
 	@Export("hasArrived")
-	public boolean hasArrived(int var1, int var2, int var3, CollisionMap var4) {
-		return var2 == super.approxDestinationX && var3 == super.approxDestinationY;
+	public boolean hasArrived(int var1, int x, int y, CollisionMap var4) {
+		return x == super.approxDestinationX && y == super.approxDestinationY;
 	}
 
 	@ObfuscatedName("f")

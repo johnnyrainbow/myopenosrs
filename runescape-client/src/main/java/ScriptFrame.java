@@ -172,12 +172,12 @@ public class ScriptFrame {
 					} else if (var0 == ScriptOpcodes.TRADINGPOST_GETOFFERNAME) {
 						var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 						var11 = (GrandExchangeEvent)Script.grandExchangeEvents.events.get(var3);
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var11.getOfferName();
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var11.getOfferName();
 						return 1;
 					} else if (var0 == ScriptOpcodes.TRADINGPOST_GETOFFERPREVIOUSNAME) {
 						var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 						var11 = (GrandExchangeEvent)Script.grandExchangeEvents.events.get(var3);
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var11.getPreviousOfferName();
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var11.getPreviousOfferName();
 						return 1;
 					} else if (var0 == ScriptOpcodes.TRADINGPOST_GETOFFERAGE) {
 						var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
@@ -187,7 +187,7 @@ public class ScriptFrame {
 						int var8 = (int)((var5 - (long)(var7 * 3600000)) / 60000L);
 						int var9 = (int)((var5 - (long)(var7 * 3600000) - (long)(var8 * 60000)) / 1000L);
 						String var10 = var7 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var10;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var10;
 						return 1;
 					} else if (var0 == ScriptOpcodes.TRADINGPOST_GETOFFERCOUNT) {
 						var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
@@ -221,7 +221,7 @@ public class ScriptFrame {
 		int var3;
 		if (var0 == ScriptOpcodes.OC_NAME) {
 			var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
-			Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = PacketBufferNode.ItemDefinition_get(var3).name;
+			Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = PacketBufferNode.ItemDefinition_get(var3).name;
 			return 1;
 		} else {
 			int var4;
@@ -232,9 +232,9 @@ public class ScriptFrame {
 				var4 = Interpreter.Interpreter_intStack[class188.Interpreter_intStackSize + 1];
 				var5 = PacketBufferNode.ItemDefinition_get(var3);
 				if (var4 >= 1 && var4 <= 5 && var5.groundActions[var4 - 1] != null) {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var5.groundActions[var4 - 1];
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var5.groundActions[var4 - 1];
 				} else {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 				}
 
 				return 1;
@@ -244,9 +244,9 @@ public class ScriptFrame {
 				var4 = Interpreter.Interpreter_intStack[class188.Interpreter_intStackSize + 1];
 				var5 = PacketBufferNode.ItemDefinition_get(var3);
 				if (var4 >= 1 && var4 <= 5 && var5.inventoryActions[var4 - 1] != null) {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var5.inventoryActions[var4 - 1];
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var5.inventoryActions[var4 - 1];
 				} else {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 				}
 
 				return 1;
@@ -305,7 +305,7 @@ public class ScriptFrame {
 
 					return 1;
 				} else if (var0 == ScriptOpcodes.OC_FIND) {
-					String var7 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					String var7 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					var4 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 					WorldMapSectionType.findItemDefinitions(var7, var4 == 1);
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = KeyHandler.foundItemIdCount;

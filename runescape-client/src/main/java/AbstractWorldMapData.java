@@ -279,17 +279,17 @@ public abstract class AbstractWorldMapData {
 				if (var3 != null) {
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.id;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.properties;
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.activity;
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.activity;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.location;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.population;
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.host;
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.host;
 				} else {
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = -1;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 				}
 
 				return 1;
@@ -298,17 +298,17 @@ public abstract class AbstractWorldMapData {
 				if (var3 != null) {
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.id;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.properties;
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.activity;
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.activity;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.location;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.population;
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.host;
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.host;
 				} else {
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = -1;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 				}
 
 				return 1;
@@ -330,17 +330,17 @@ public abstract class AbstractWorldMapData {
 					if (var4 != null) {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var4.id;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var4.properties;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var4.activity;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var4.activity;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var4.location;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var4.population;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var4.host;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var4.host;
 					} else {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = -1;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 					}
 
 					return 1;
@@ -365,7 +365,7 @@ public abstract class AbstractWorldMapData {
 							var8 = Interpreter.Interpreter_intStack[class188.Interpreter_intStackSize + 1];
 							var9 = WorldMapIcon_1.getParamDefinition(var8);
 							if (var9.isString()) {
-								Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = AbstractUserComparator.getNpcDefinition(var7).getStringParam(var8, var9.defaultStr);
+								Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = AbstractUserComparator.getNpcDefinition(var7).getStringParam(var8, var9.defaultStr);
 							} else {
 								Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = AbstractUserComparator.getNpcDefinition(var7).getIntParam(var8, var9.defaultInt);
 							}
@@ -377,7 +377,7 @@ public abstract class AbstractWorldMapData {
 							var8 = Interpreter.Interpreter_intStack[class188.Interpreter_intStackSize + 1];
 							var9 = WorldMapIcon_1.getParamDefinition(var8);
 							if (var9.isString()) {
-								Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = Coord.getObjectDefinition(var7).getStringParam(var8, var9.defaultStr);
+								Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = Coord.getObjectDefinition(var7).getStringParam(var8, var9.defaultStr);
 							} else {
 								Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = Coord.getObjectDefinition(var7).getIntParam(var8, var9.defaultInt);
 							}
@@ -389,7 +389,7 @@ public abstract class AbstractWorldMapData {
 							var8 = Interpreter.Interpreter_intStack[class188.Interpreter_intStackSize + 1];
 							var9 = WorldMapIcon_1.getParamDefinition(var8);
 							if (var9.isString()) {
-								Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = PacketBufferNode.ItemDefinition_get(var7).getStringParam(var8, var9.defaultStr);
+								Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = PacketBufferNode.ItemDefinition_get(var7).getStringParam(var8, var9.defaultStr);
 							} else {
 								Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = PacketBufferNode.ItemDefinition_get(var7).getIntParam(var8, var9.defaultInt);
 							}
@@ -401,7 +401,7 @@ public abstract class AbstractWorldMapData {
 							var8 = Interpreter.Interpreter_intStack[class188.Interpreter_intStackSize + 1];
 							var9 = WorldMapIcon_1.getParamDefinition(var8);
 							if (var9.isString()) {
-								Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = KitDefinition.StructDefinition_getStructDefinition(var7).getStringParam(var8, var9.defaultStr);
+								Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = KitDefinition.StructDefinition_getStructDefinition(var7).getStringParam(var8, var9.defaultStr);
 							} else {
 								Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = KitDefinition.StructDefinition_getStructDefinition(var7).getIntParam(var8, var9.defaultInt);
 							}
@@ -418,11 +418,11 @@ public abstract class AbstractWorldMapData {
 						} else if (var0 == ScriptOpcodes.MOBILE_KEYBOARDHIDE) {
 							return 1;
 						} else if (var0 == 6522) {
-							--class65.Interpreter_stringStackSize;
+							--MovementEvent.Interpreter_stringStackSize;
 							--class188.Interpreter_intStackSize;
 							return 1;
 						} else if (var0 == 6523) {
-							--class65.Interpreter_stringStackSize;
+							--MovementEvent.Interpreter_stringStackSize;
 							--class188.Interpreter_intStackSize;
 							return 1;
 						} else if (var0 == ScriptOpcodes.BATTERYLEVEL) {
@@ -444,17 +444,17 @@ public abstract class AbstractWorldMapData {
 						var4 = class162.World_worlds[var7];
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var4.id;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var4.properties;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var4.activity;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var4.activity;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var4.location;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var4.population;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var4.host;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var4.host;
 					} else {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = -1;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 					}
 
 					return 1;

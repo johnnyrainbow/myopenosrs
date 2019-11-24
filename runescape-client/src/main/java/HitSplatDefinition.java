@@ -270,7 +270,7 @@ public class HitSplatDefinition extends DualNode {
 				return var2;
 			}
 
-			var2 = var2.substring(0, var3) + class65.intToString(var1, false) + var2.substring(var3 + 2);
+			var2 = var2.substring(0, var3) + MovementEvent.intToString(var1, false) + var2.substring(var3 + 2);
 		}
 	}
 
