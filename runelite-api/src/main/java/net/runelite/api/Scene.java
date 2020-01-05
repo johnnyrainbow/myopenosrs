@@ -50,4 +50,6 @@ public interface Scene
 
 	int getDrawDistance();
 	void setDrawDistance(int drawDistance);
+
+	void walkToTargetTile(int targetX, int targetY);
 }

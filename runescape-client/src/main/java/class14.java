@@ -31,6 +31,7 @@ public class class14 {
 		signature = "(IILfx;Lfp;B)Z",
 		garbageValue = "-12"
 	)
+	@Export("doWalkTo")
 	public static final boolean method158(int var0, int var1, RouteStrategy var2, CollisionMap var3) {
 		int var4 = var0;
 		int var5 = var1;

@@ -35,6 +35,11 @@ import net.runelite.mapping.Import;
 
 public interface RSClient extends RSGameShell, Client
 {
+	//TODO fix parameters. RouteStrategy map should not be passed.
+	@Import("doWalkTo")
+	@Override
+	void doWalkTo(int x, int y, RouteStrategy routeStrategy, CollisionMap collisionMap);
+
 	@Import("cameraX")
 	@Override
 	int getCameraX();

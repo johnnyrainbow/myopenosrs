@@ -80,6 +80,16 @@ public abstract class RSSceneMixin implements RSScene
 	@Inject
 	private static int rl$drawDistance;
 
+	@Inject
+	public void walkToTargetTile(int targetX, int targetY)
+	{
+
+		client.setSelectedSceneTileX(targetX);
+		client.setSelectedSceneTileY(targetY);
+		client.setViewportWalking(true); //what is this??
+		client.setCheckClick(false); //what is this??
+	}
+
 	@Replace("draw")
 	void rl$drawScene(int cameraX, int cameraY, int cameraZ, int cameraPitch, int cameraYaw, int plane)
 	{

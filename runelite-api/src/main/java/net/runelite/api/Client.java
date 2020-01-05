@@ -33,6 +33,7 @@ import java.util.Map;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
 import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.coords.WorldPoint;
 import net.runelite.api.hooks.Callbacks;
@@ -45,8 +46,7 @@ import org.slf4j.Logger;
 /**
  * Represents the RuneScape client.
  */
-public interface Client extends GameShell
-{
+public interface Client extends GameShell {
 	/**
 	 * The client invokes these callbacks to communicate to
 	 */
@@ -55,6 +55,9 @@ public interface Client extends GameShell
 	DrawCallbacks getDrawCallbacks();
 
 	void setDrawCallbacks(DrawCallbacks drawCallbacks);
+
+	//TODO
+	void doWalkTo(int x, int y, RouteStrategy routeStrategy, CollisionMap collisionMap);
 
 	/**
 	 * Retrieve a global logger for the client.
