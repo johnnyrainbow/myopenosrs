@@ -1183,7 +1183,7 @@ public class MidiPcmStream extends PcmStream {
 				LoginPacket.invalidateWidget(var3);
 				return 1;
 			} else if (var0 == ScriptOpcodes.CC_SETTEXT) {
-				String var7 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+				String var7 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 				if (!var7.equals(var3.text)) {
 					var3.text = var7;
 					LoginPacket.invalidateWidget(var3);

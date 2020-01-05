@@ -100,7 +100,7 @@ public class GrandExchangeEvents {
 
 		if (var3 != null) {
 			class188.Interpreter_intStackSize = 0;
-			class65.Interpreter_stringStackSize = 0;
+			MovementEvent.Interpreter_stringStackSize = 0;
 			var17 = -1;
 			int[] var5 = var3.opcodes;
 			int[] var6 = var3.intOperands;
@@ -208,7 +208,7 @@ public class GrandExchangeEvents {
 							Varps.Varps_main[var11] = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 							BufferedSink.changeGameOptions(var11);
 						} else if (var29 == ScriptOpcodes.SCONST) {
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.stringOperands[var17];
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.stringOperands[var17];
 						} else if (var29 == ScriptOpcodes.JUMP) {
 							var17 += var6[var17];
 						} else if (var29 == ScriptOpcodes.IF_ICMPNE) {
@@ -264,18 +264,18 @@ public class GrandExchangeEvents {
 						} else if (var29 == ScriptOpcodes.ISTORE) {
 							Interpreter.Interpreter_intLocals[var6[var17]] = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 						} else if (var29 == ScriptOpcodes.SLOAD) {
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = class247.Interpreter_stringLocals[var6[var17]];
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = class247.Interpreter_stringLocals[var6[var17]];
 						} else if (var29 == ScriptOpcodes.SSTORE) {
-							class247.Interpreter_stringLocals[var6[var17]] = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+							class247.Interpreter_stringLocals[var6[var17]] = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 						} else if (var29 == ScriptOpcodes.JOIN_STRING) {
 							var11 = var6[var17];
-							class65.Interpreter_stringStackSize -= var11;
-							String var31 = User.method5086(Interpreter.Interpreter_stringStack, class65.Interpreter_stringStackSize, var11);
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var31;
+							MovementEvent.Interpreter_stringStackSize -= var11;
+							String var31 = User.method5086(Interpreter.Interpreter_stringStack, MovementEvent.Interpreter_stringStackSize, var11);
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var31;
 						} else if (var29 == ScriptOpcodes.POP_INT) {
 							--class188.Interpreter_intStackSize;
 						} else if (var29 == ScriptOpcodes.POP_STRING) {
-							--class65.Interpreter_stringStackSize;
+							--MovementEvent.Interpreter_stringStackSize;
 						} else {
 							int var15;
 							if (var29 != ScriptOpcodes.INVOKE) {
@@ -323,14 +323,14 @@ public class GrandExchangeEvents {
 										var18 = "null";
 									}
 
-									Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var18;
+									Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var18;
 								} else if (var29 == ScriptOpcodes.SET_VARC_STRING_OLD) {
-									MilliClock.varcs.setStringOld(var6[var17], Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize]);
+									MilliClock.varcs.setStringOld(var6[var17], Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize]);
 								} else if (var29 == ScriptOpcodes.GET_VARC_STRING) {
 									var18 = MilliClock.varcs.getString(var6[var17]);
-									Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var18;
+									Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var18;
 								} else if (var29 == ScriptOpcodes.SET_VARC_STRING) {
-									MilliClock.varcs.setString(var6[var17], Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize]);
+									MilliClock.varcs.setString(var6[var17], Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize]);
 								} else {
 									if (var29 != ScriptOpcodes.SWITCH) {
 										throw new IllegalStateException();
@@ -353,11 +353,11 @@ public class GrandExchangeEvents {
 								}
 
 								for (var15 = 0; var15 < var12.stringArgumentCount; ++var15) {
-									var14[var15] = Interpreter.Interpreter_stringStack[var15 + (class65.Interpreter_stringStackSize - var12.stringArgumentCount)];
+									var14[var15] = Interpreter.Interpreter_stringStack[var15 + (MovementEvent.Interpreter_stringStackSize - var12.stringArgumentCount)];
 								}
 
 								class188.Interpreter_intStackSize -= var12.intArgumentCount;
-								class65.Interpreter_stringStackSize -= var12.stringArgumentCount;
+								MovementEvent.Interpreter_stringStackSize -= var12.stringArgumentCount;
 								ScriptFrame var19 = new ScriptFrame();
 								var19.script = var3;
 								var19.pc = var17;

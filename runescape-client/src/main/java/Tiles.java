@@ -247,7 +247,7 @@ public final class Tiles {
 			String var3;
 			int var4;
 			if (var0 == ScriptOpcodes.CHAT_SENDABUSEREPORT) {
-				var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+				var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 				class188.Interpreter_intStackSize -= 2;
 				var4 = Interpreter.Interpreter_intStack[class188.Interpreter_intStackSize];
 				int var5 = Interpreter.Interpreter_intStack[class188.Interpreter_intStackSize + 1];
@@ -268,16 +268,16 @@ public final class Tiles {
 					if (var15 != null) {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var15.count;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var15.cycle;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var15.sender != null ? var15.sender : "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var15.prefix != null ? var15.prefix : "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var15.text != null ? var15.text : "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var15.sender != null ? var15.sender : "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var15.prefix != null ? var15.prefix : "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var15.text != null ? var15.text : "";
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var15.isFromFriend() ? 1 : (var15.isFromIgnored() ? 2 : 0);
 					} else {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = -1;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 					}
 
@@ -288,16 +288,16 @@ public final class Tiles {
 					if (var16 != null) {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var16.type;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var16.cycle;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var16.sender != null ? var16.sender : "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var16.prefix != null ? var16.prefix : "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var16.text != null ? var16.text : "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var16.sender != null ? var16.sender : "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var16.prefix != null ? var16.prefix : "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var16.text != null ? var16.text : "";
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var16.isFromFriend() ? 1 : (var16.isFromIgnored() ? 2 : 0);
 					} else {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = -1;
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 					}
 
@@ -311,7 +311,7 @@ public final class Tiles {
 
 					return 1;
 				} else if (var0 == ScriptOpcodes.CHAT_SENDPUBLIC) {
-					var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					var4 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 					String var14 = var3.toLowerCase();
 					byte var17 = 0;
@@ -438,9 +438,9 @@ public final class Tiles {
 					Client.packetWriter.addNode(var8);
 					return 1;
 				} else if (var0 == ScriptOpcodes.CHAT_SENDPRIVATE) {
-					class65.Interpreter_stringStackSize -= 2;
-					var3 = Interpreter.Interpreter_stringStack[class65.Interpreter_stringStackSize];
-					String var12 = Interpreter.Interpreter_stringStack[class65.Interpreter_stringStackSize + 1];
+					MovementEvent.Interpreter_stringStackSize -= 2;
+					var3 = Interpreter.Interpreter_stringStack[MovementEvent.Interpreter_stringStackSize];
+					String var12 = Interpreter.Interpreter_stringStack[MovementEvent.Interpreter_stringStackSize + 1];
 					PacketBufferNode var11 = class2.getPacketBufferNode(ClientPacket.field2177, Client.packetWriter.isaacCipher);
 					var11.packetBuffer.writeShort(0);
 					int var13 = var11.packetBuffer.offset;
@@ -466,17 +466,17 @@ public final class Tiles {
 						Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = AttackOption.Messages_getLastChatID(var10);
 						return 1;
 					} else if (var0 == ScriptOpcodes.DOCHEAT) {
-						var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+						var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 						TaskHandler.doCheat(var3);
 						return 1;
 					} else if (var0 == ScriptOpcodes.CHAT_SETMESSAGEFILTER) {
-						Client.field846 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize].toLowerCase().trim();
+						Client.field846 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize].toLowerCase().trim();
 						return 1;
 					} else if (var0 == ScriptOpcodes.CHAT_GETMESSAGEFILTER) {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = Client.field846;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = Client.field846;
 						return 1;
 					} else if (var0 == ScriptOpcodes.DEBUGMES) {
-						var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+						var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 						System.out.println(var3);
 						return 1;
 					} else {
@@ -489,7 +489,7 @@ public final class Tiles {
 						var3 = "";
 					}
 
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3;
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3;
 					return 1;
 				}
 			}

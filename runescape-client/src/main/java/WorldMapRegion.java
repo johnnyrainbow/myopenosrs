@@ -1141,13 +1141,13 @@ public class WorldMapRegion {
 				Login.Login_loadingText = "Prepared sound engine";
 				Login.Login_loadingPercent = 35;
 				Client.titleLoadingStage = 50;
-				class65.WorldMapElement_fonts = new Fonts(class3.archive8, WorldMapSection1.archive13);
+				MovementEvent.WorldMapElement_fonts = new Fonts(class3.archive8, WorldMapSection1.archive13);
 			} else {
 				int var17;
 				if (Client.titleLoadingStage == 50) {
 					FontName[] var31 = new FontName[]{FontName.FontName_plain11, FontName.FontName_verdana13, FontName.FontName_verdana15, FontName.FontName_verdana11, FontName.FontName_plain12, FontName.FontName_bold12};
 					var17 = var31.length;
-					Fonts var24 = class65.WorldMapElement_fonts;
+					Fonts var24 = MovementEvent.WorldMapElement_fonts;
 					FontName[] var23 = new FontName[]{FontName.FontName_plain11, FontName.FontName_verdana13, FontName.FontName_verdana15, FontName.FontName_verdana11, FontName.FontName_plain12, FontName.FontName_bold12};
 					Client.fontsMap = var24.createMap(var23);
 					if (Client.fontsMap.size() < var17) {
@@ -1255,7 +1255,7 @@ public class WorldMapRegion {
 							NPCDefinition.NpcDefinition_archive = var34;
 							NPCDefinition.NpcDefinition_modelArchive = var22;
 							Messages.method2227(class2.archive2);
-							class65.method1232(class2.archive2, MouseRecorder.archive7, Client.isMembersWorld, class3.fontPlain11);
+							MovementEvent.method1232(class2.archive2, MouseRecorder.archive7, Client.isMembersWorld, class3.fontPlain11);
 							Archive var28 = class2.archive2;
 							Archive var8 = ClientPacket.archive0;
 							Archive var9 = ItemDefinition.archive1;

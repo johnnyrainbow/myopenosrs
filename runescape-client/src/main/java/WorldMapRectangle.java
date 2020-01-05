@@ -74,7 +74,7 @@ public final class WorldMapRectangle {
 					var16 = var11.getExternalName();
 				}
 
-				Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var16;
+				Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var16;
 				return 1;
 			} else if (var0 == ScriptOpcodes.WORLDMAP_SETMAP) {
 				var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
@@ -354,9 +354,9 @@ public final class WorldMapRectangle {
 												var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 												var6 = GrandExchangeOfferUnitPriceComparator.WorldMapElement_get(var3);
 												if (var6.name == null) {
-													Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+													Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 												} else {
-													Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var6.name;
+													Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var6.name;
 												}
 
 												return 1;
@@ -543,7 +543,7 @@ public final class WorldMapRectangle {
 		Client.field673 = 0;
 		HitSplatDefinition.method4612();
 		GrandExchangeOfferWorldComparator.method71(var0, var1);
-		class65.method1228(var1);
+		MovementEvent.method1228(var1);
 
 		int var2;
 		for (var2 = 0; var2 < Client.field815; ++var2) {

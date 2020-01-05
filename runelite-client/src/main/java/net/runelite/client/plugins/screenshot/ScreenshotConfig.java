@@ -207,4 +207,15 @@ public interface ScreenshotConfig extends Config
 	{
 		return Keybind.NOT_SET;
 	}
+
+	@ConfigItem(
+		keyName = "hideOverlays",
+		name = "Hide Overlays",
+		description = "Hides Runelite and OpenOSRS overlays for screenshots",
+		position = 16
+	)
+	default boolean hideOverlays()
+	{
+		return false;
+	}
 }

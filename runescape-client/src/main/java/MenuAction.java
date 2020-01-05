@@ -104,11 +104,11 @@ public class MenuAction {
 				var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 				if (Message.friendSystem.method1844() && var3 >= 0 && var3 < Message.friendSystem.friendsList.getSize()) {
 					Friend var8 = (Friend)Message.friendSystem.friendsList.get(var3);
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var8.getName();
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var8.getPreviousName();
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var8.getName();
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var8.getPreviousName();
 				} else {
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-					Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+					Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 				}
 
 				return 1;
@@ -133,36 +133,36 @@ public class MenuAction {
 			} else {
 				String var5;
 				if (var0 == ScriptOpcodes.FRIEND_SETRANK) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					int var6 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 					BoundaryObject.method3274(var5, var6);
 					return 1;
 				} else if (var0 == ScriptOpcodes.FRIEND_ADD) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					Message.friendSystem.addFriend(var5);
 					return 1;
 				} else if (var0 == ScriptOpcodes.FRIEND_DEL) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					Message.friendSystem.removeFriend(var5);
 					return 1;
 				} else if (var0 == ScriptOpcodes.IGNORE_ADD) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					Message.friendSystem.addIgnore(var5);
 					return 1;
 				} else if (var0 == ScriptOpcodes.IGNORE_DEL) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					Message.friendSystem.removeIgnore(var5);
 					return 1;
 				} else if (var0 == ScriptOpcodes.FRIEND_TEST) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					var5 = WorldMapManager.method662(var5);
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = Message.friendSystem.isFriended(new Username(var5, class188.loginType), false) ? 1 : 0;
 					return 1;
 				} else if (var0 == ScriptOpcodes.CLAN_GETCHATDISPLAYNAME) {
 					if (Calendar.clanChat != null) {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = Calendar.clanChat.name;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = Calendar.clanChat.name;
 					} else {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 					}
 
 					return 1;
@@ -177,9 +177,9 @@ public class MenuAction {
 				} else if (var0 == ScriptOpcodes.CLAN_GETCHATUSERNAME) {
 					var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 					if (Calendar.clanChat != null && var3 < Calendar.clanChat.getSize()) {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = Calendar.clanChat.get(var3).getUsername().getName();
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = Calendar.clanChat.get(var3).getUsername().getName();
 					} else {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 					}
 
 					return 1;
@@ -205,14 +205,14 @@ public class MenuAction {
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = Calendar.clanChat != null ? Calendar.clanChat.minKick : 0;
 					return 1;
 				} else if (var0 == ScriptOpcodes.CLAN_KICKUSER) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					WorldMapIcon_1.clanKickUser(var5);
 					return 1;
 				} else if (var0 == ScriptOpcodes.CLAN_GETCHATRANK) {
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = Calendar.clanChat != null ? Calendar.clanChat.rank : 0;
 					return 1;
 				} else if (var0 == ScriptOpcodes.CLAN_JOINCHAT) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					WorldMapSection2.Clan_joinChat(var5);
 					return 1;
 				} else if (var0 == ScriptOpcodes.CLAN_LEAVECHAT) {
@@ -230,16 +230,16 @@ public class MenuAction {
 					var3 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
 					if (Message.friendSystem.method1844() && var3 >= 0 && var3 < Message.friendSystem.ignoreList.getSize()) {
 						Ignored var4 = (Ignored)Message.friendSystem.ignoreList.get(var3);
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var4.getName();
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var4.getPreviousName();
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var4.getName();
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var4.getPreviousName();
 					} else {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 					}
 
 					return 1;
 				} else if (var0 == ScriptOpcodes.IGNORE_TEST) {
-					var5 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var5 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					var5 = WorldMapManager.method662(var5);
 					Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = Message.friendSystem.isIgnored(new Username(var5, class188.loginType)) ? 1 : 0;
 					return 1;
@@ -254,9 +254,9 @@ public class MenuAction {
 					return 1;
 				} else if (var0 == ScriptOpcodes.CLAN_GETCHATOWNERNAME) {
 					if (Calendar.clanChat != null && Calendar.clanChat.owner != null) {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = Calendar.clanChat.owner;
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = Calendar.clanChat.owner;
 					} else {
-						Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+						Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 					}
 
 					return 1;

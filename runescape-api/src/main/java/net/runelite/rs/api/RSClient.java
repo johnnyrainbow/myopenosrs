@@ -1139,4 +1139,8 @@ public interface RSClient extends RSGameShell, Client
 
 	@Import("updateItemPile")
 	void updateItemPile(int localX, int localY);
+
+	@Override
+	@Import("actorMovementManager")
+	RSMovementEvent getActorMovementManager();
 }

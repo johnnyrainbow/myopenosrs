@@ -85,7 +85,7 @@ final class GrandExchangeOfferNameComparator implements Comparator {
 			var3 = var2 ? UserComparator7.field1946 : class197.field2398;
 		}
 
-		String var4 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+		String var4 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 		int[] var5 = null;
 		if (var4.length() > 0 && var4.charAt(var4.length() - 1) == 'Y') {
 			int var6 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
@@ -102,7 +102,7 @@ final class GrandExchangeOfferNameComparator implements Comparator {
 		int var7;
 		for (var7 = var8.length - 1; var7 >= 1; --var7) {
 			if (var4.charAt(var7 - 1) == 's') {
-				var8[var7] = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+				var8[var7] = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 			} else {
 				var8[var7] = new Integer(Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize]);
 			}

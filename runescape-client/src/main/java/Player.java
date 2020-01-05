@@ -454,12 +454,12 @@ public final class Player extends Actor {
 					int var7 = this.transformedSize();
 					if (var5 >= var7 && var5 < 104 - var7 && var6 >= var7 && var6 < 104 - var7 && var1 >= var7 && var1 < 104 - var7 && var2 >= var7 && var2 < 104 - var7) {
 						int var9 = this.transformedSize();
-						Client.field902.approxDestinationX = var1;
-						Client.field902.approxDestinationY = var2;
-						Client.field902.approxDestinationSizeX = 1;
-						Client.field902.approxDestinationSizeY = 1;
-						class65 var10 = Client.field902;
-						class65 var11 = var10;
+						Client.actorMovementManager.approxDestinationX = var1;
+						Client.actorMovementManager.approxDestinationY = var2;
+						Client.actorMovementManager.approxDestinationSizeX = 1;
+						Client.actorMovementManager.approxDestinationSizeY = 1;
+						MovementEvent var10 = Client.actorMovementManager;
+						MovementEvent var11 = var10;
 						CollisionMap var12 = Client.collisionMaps[this.plane];
 						int[] var13 = Client.field903;
 						int[] var14 = Client.field730;

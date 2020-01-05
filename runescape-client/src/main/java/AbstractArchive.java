@@ -802,7 +802,7 @@ public abstract class AbstractArchive {
 	static int method4166(int var0, Script var1, boolean var2) {
 		String var3;
 		if (var0 == ScriptOpcodes.MES) {
-			var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+			var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 			class83.addGameMessage(0, "", var3);
 			return 1;
 		} else if (var0 == ScriptOpcodes.ANIM) {
@@ -818,7 +818,7 @@ public abstract class AbstractArchive {
 		} else {
 			int var10;
 			if (var0 == ScriptOpcodes.RESUME_COUNTDIALOG) {
-				var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+				var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 				var10 = 0;
 				if (SecureRandomFuture.isNumber(var3)) {
 					var10 = ArchiveDiskActionHandler.parseInt(var3);
@@ -831,14 +831,14 @@ public abstract class AbstractArchive {
 			} else {
 				PacketBufferNode var14;
 				if (var0 == ScriptOpcodes.RESUME_NAMEDIALOG) {
-					var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					var14 = class2.getPacketBufferNode(ClientPacket.field2271, Client.packetWriter.isaacCipher);
 					var14.packetBuffer.writeByte(var3.length() + 1);
 					var14.packetBuffer.writeStringCp1252NullTerminated(var3);
 					Client.packetWriter.addNode(var14);
 					return 1;
 				} else if (var0 == ScriptOpcodes.RESUME_STRINGDIALOG) {
-					var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+					var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 					var14 = class2.getPacketBufferNode(ClientPacket.field2188, Client.packetWriter.isaacCipher);
 					var14.packetBuffer.writeByte(var3.length() + 1);
 					var14.packetBuffer.writeStringCp1252NullTerminated(var3);
@@ -849,7 +849,7 @@ public abstract class AbstractArchive {
 					int var15;
 					if (var0 == ScriptOpcodes.OPPLAYER) {
 						var15 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
-						var7 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+						var7 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 						WorldMapArea.method364(var15, var7);
 						return 1;
 					} else if (var0 == ScriptOpcodes.IF_DRAGPICKUP) {
@@ -878,7 +878,7 @@ public abstract class AbstractArchive {
 						FriendSystem.savePreferences();
 						return 1;
 					} else if (var0 == ScriptOpcodes.OPENURL) {
-						var3 = Interpreter.Interpreter_stringStack[--class65.Interpreter_stringStackSize];
+						var3 = Interpreter.Interpreter_stringStack[--MovementEvent.Interpreter_stringStackSize];
 						boolean var4 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize] == 1;
 						class13.openURL(var3, var4, false);
 						return 1;
@@ -890,9 +890,9 @@ public abstract class AbstractArchive {
 						return 1;
 					} else if (var0 == ScriptOpcodes.BUG_REPORT) {
 						var15 = Interpreter.Interpreter_intStack[--class188.Interpreter_intStackSize];
-						class65.Interpreter_stringStackSize -= 2;
-						var7 = Interpreter.Interpreter_stringStack[class65.Interpreter_stringStackSize];
-						String var5 = Interpreter.Interpreter_stringStack[class65.Interpreter_stringStackSize + 1];
+						MovementEvent.Interpreter_stringStackSize -= 2;
+						var7 = Interpreter.Interpreter_stringStack[MovementEvent.Interpreter_stringStackSize];
+						String var5 = Interpreter.Interpreter_stringStack[MovementEvent.Interpreter_stringStackSize + 1];
 						if (var7.length() > 500) {
 							return 1;
 						} else if (var5.length() > 500) {
@@ -1059,7 +1059,7 @@ public abstract class AbstractArchive {
 							Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = class48.method861();
 							return 1;
 						} else if (var0 == 3155) {
-							--class65.Interpreter_stringStackSize;
+							--MovementEvent.Interpreter_stringStackSize;
 							return 1;
 						} else if (var0 == 3156) {
 							return 1;
@@ -1084,12 +1084,12 @@ public abstract class AbstractArchive {
 							Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 							return 1;
 						} else if (var0 == 3163) {
-							--class65.Interpreter_stringStackSize;
+							--MovementEvent.Interpreter_stringStackSize;
 							Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = 0;
 							return 1;
 						} else if (var0 == 3164) {
 							--class188.Interpreter_intStackSize;
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 							return 1;
 						} else if (var0 == 3165) {
 							--class188.Interpreter_intStackSize;
@@ -1105,15 +1105,15 @@ public abstract class AbstractArchive {
 							return 1;
 						} else if (var0 == 3168) {
 							class188.Interpreter_intStackSize -= 2;
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
-							Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
+							Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = "";
 							return 1;
 						} else if (var0 == 3169) {
 							return 1;
@@ -1141,12 +1141,12 @@ public abstract class AbstractArchive {
 						} else if (var0 == 3177) {
 							return 1;
 						} else if (var0 == 3178) {
-							--class65.Interpreter_stringStackSize;
+							--MovementEvent.Interpreter_stringStackSize;
 							return 1;
 						} else if (var0 == 3179) {
 							return 1;
 						} else if (var0 == 3180) {
-							--class65.Interpreter_stringStackSize;
+							--MovementEvent.Interpreter_stringStackSize;
 							return 1;
 						} else {
 							return 2;

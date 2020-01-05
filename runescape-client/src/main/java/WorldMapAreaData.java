@@ -326,7 +326,7 @@ public class WorldMapAreaData extends WorldMapArea {
 			Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.scrollY;
 			return 1;
 		} else if (var0 == ScriptOpcodes.IF_GETTEXT) {
-			Interpreter.Interpreter_stringStack[++class65.Interpreter_stringStackSize - 1] = var3.text;
+			Interpreter.Interpreter_stringStack[++MovementEvent.Interpreter_stringStackSize - 1] = var3.text;
 			return 1;
 		} else if (var0 == ScriptOpcodes.IF_GETSCROLLWIDTH) {
 			Interpreter.Interpreter_intStack[++class188.Interpreter_intStackSize - 1] = var3.scrollWidth;
