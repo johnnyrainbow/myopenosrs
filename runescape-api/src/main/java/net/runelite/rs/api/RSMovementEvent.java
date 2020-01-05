@@ -1,5 +1,7 @@
 package net.runelite.rs.api;
 
-public class RSMovementEvent
+import net.runelite.api.ActorMovement;
+
+public interface RSMovementEvent extends ActorMovement, RSRouteStrategy
 {
 }
