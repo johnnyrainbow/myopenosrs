@@ -1924,4 +1924,11 @@ public interface Client extends GameShell
 	 * when a inventory item is clicked and dragged.
 	 */
 	void setTempMenuEntry(MenuEntry entry);
+
+
+	/**
+	 * naming all over the place lmao but not really sure what else to call it atm
+	 * @return
+	 */
+	ActorMovement getActorMovementManager();
 }

@@ -133,11 +133,14 @@ public final class Client extends GameShell implements Usernamed {
 	)
 	@Export("staffModLevel")
 	public static int staffModLevel;
+
+
 	@ObfuscatedName("ts")
 	@ObfuscatedSignature(
 		signature = "Lba;"
 	)
-	static final MovementEvent field902;
+	@Export("actorMovementManager")
+	static final MovementEvent actorMovementManager;
 	@ObfuscatedName("oi")
 	@Export("rootWidgetYs")
 	static int[] rootWidgetYs;
@@ -1536,7 +1539,7 @@ public final class Client extends GameShell implements Usernamed {
 		archiveLoaders = new ArrayList(10);
 		archiveLoadersDone = 0;
 		field629 = 0;
-		field902 = new MovementEvent();
+		actorMovementManager = new MovementEvent();
 		field903 = new int[50];
 		field730 = new int[50];
 	}
